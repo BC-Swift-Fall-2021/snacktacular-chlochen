@@ -285,6 +285,11 @@
                                 <action selector="cancelButtonPressed:" destination="b53-X5-0bt" id="KUX-Ei-c2S"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="TDQ-b2-Szh">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="b53-X5-0bt" id="4YH-Xl-rlz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -369,7 +374,7 @@
         <image name="camera.fill" catalog="system" width="128" height="94"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <namedColor name="PrimaryColor">
-            <color red="0.99328404660000003" green="0.45009601119999998" blue="0.214284271" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.99299997091293335" green="0.44999998807907104" blue="0.21400000154972076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
