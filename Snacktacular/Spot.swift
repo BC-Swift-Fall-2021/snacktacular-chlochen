@@ -8,20 +8,38 @@
 import Foundation
 import Firebase
 import FirebaseFirestore
+import MapKit
 
-class Spot {
+class Spot: NSObject, MKAnnotation {
     var name: String
     var address: String
+    var coordinate: CLLocationCoordinate2D
     var averageRating: Double
     var numberOfReviews: Int
     var postingUserID: String
     var documentID: String
     
+    
     var dictionary: [String: Any] {
         return ["name": name, "address": address, "averageRating": averageRating, "numberOfReviews": numberOfReviews, "postingUserID": postingUserID,"documentID": documentID]
     }
     
-    init(name: String, address: String, averageRating: Double, numberOfReviews: Int, postingUserID: String, documentID: String) {
+    var latitude: CLLocationDegrees {
+        return coordinate.latitude
+    }
+    
+    var longitude: CLLocationDegrees {
+        return coordinate.longitude
+    }
+    
+    var title: String? {
+        return name
+    }
+    
+    var subtitle: String? {
+        return address
+    }
+    init(name: String, address: String, coordinate: CLLocationCoordinate2D, averageRating: Double, numberOfReviews: Int, postingUserID: String, documentID: String) {
         self.name = name
         self.address = address
         self.averageRating = averageRating
@@ -30,8 +48,8 @@ class Spot {
         self.documentID = documentID
     }
     
-    convenience init() {
-        self.init(name: "", address: "", averageRating: 0.0, numberOfReviews: 0, postingUserID: "", documentID: "")
+    convenience override init() {
+        self.init(name: "", address: "",  averageRating: 0.0, numberOfReviews: 0, postingUserID: "", documentID: "")
     }
     
     convenience init(dictionary: [String: Any]) {
@@ -41,7 +59,7 @@ class Spot {
         let numberOfReviews = dictionary["numberOfReviews"] as! Int? ?? 0
         let postingUserID = dictionary["postingUserID"] as! String? ?? ""
         let documentID = dictionary["documentID"] as! String? ?? ""
-        self.init(name: name, address: address, averageRating: averageRating, numberOfReviews: numberOfReviews, postingUserID: postingUserID, documentID: "")
+        self.init(name: name, address: address,coordinate: CLLocationCoordinate2D(), averageRating: averageRating, numberOfReviews: numberOfReviews, postingUserID: postingUserID, documentID: "")
     }
     
     func saveData(completion: @escaping (Bool) -> () ) {
