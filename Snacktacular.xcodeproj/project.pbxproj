@@ -12,6 +12,7 @@
 		61303F59272F768900B3D3B6 /* SpotListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61303F58272F768900B3D3B6 /* SpotListViewController.swift */; };
 		61303F5B272F78AB00B3D3B6 /* SpotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61303F5A272F78AB00B3D3B6 /* SpotTableViewCell.swift */; };
 		61303F5D272F7C8C00B3D3B6 /* SpotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61303F5C272F7C8C00B3D3B6 /* SpotDetailViewController.swift */; };
+		6160C4FC27399ADB00FC9E46 /* SpotReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6160C4FB27399ADB00FC9E46 /* SpotReviewTableViewCell.swift */; };
 		616F90C62738E1DE00CF0D72 /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616F90C52738E1DE00CF0D72 /* ReviewTableViewController.swift */; };
 		616F90C82738E89300CF0D72 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616F90C72738E89300CF0D72 /* Review.swift */; };
 		616F90CA2738E9F600CF0D72 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616F90C92738E9F600CF0D72 /* Reviews.swift */; };
@@ -34,6 +35,7 @@
 		61303F58272F768900B3D3B6 /* SpotListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotListViewController.swift; sourceTree = "<group>"; };
 		61303F5A272F78AB00B3D3B6 /* SpotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotTableViewCell.swift; sourceTree = "<group>"; };
 		61303F5C272F7C8C00B3D3B6 /* SpotDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetailViewController.swift; sourceTree = "<group>"; };
+		6160C4FB27399ADB00FC9E46 /* SpotReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotReviewTableViewCell.swift; sourceTree = "<group>"; };
 		616F90C52738E1DE00CF0D72 /* ReviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
 		616F90C72738E89300CF0D72 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		616F90C92738E9F600CF0D72 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				61303F58272F768900B3D3B6 /* SpotListViewController.swift */,
 				61303F5A272F78AB00B3D3B6 /* SpotTableViewCell.swift */,
 				61303F5C272F7C8C00B3D3B6 /* SpotDetailViewController.swift */,
+				6160C4FB27399ADB00FC9E46 /* SpotReviewTableViewCell.swift */,
 				616F90C52738E1DE00CF0D72 /* ReviewTableViewController.swift */,
 				617771FC27307D07006E2502 /* UIViewController+alert.swift */,
 				617772002730817B006E2502 /* APIKeys.swift */,
@@ -267,6 +270,7 @@
 				616F90C82738E89300CF0D72 /* Review.swift in Sources */,
 				617771FF27307D9B006E2502 /* Spots.swift in Sources */,
 				61303F5B272F78AB00B3D3B6 /* SpotTableViewCell.swift in Sources */,
+				6160C4FC27399ADB00FC9E46 /* SpotReviewTableViewCell.swift in Sources */,
 				617772012730817B006E2502 /* APIKeys.swift in Sources */,
 				617771FB27307359006E2502 /* Spot.swift in Sources */,
 				619A9CE8272F470E008E0A4F /* SceneDelegate.swift in Sources */,
