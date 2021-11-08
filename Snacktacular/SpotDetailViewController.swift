@@ -21,10 +21,16 @@ class SpotDetailViewController: UIViewController {
     var spot: Spot!
     let regionDistance: CLLocationDegrees = 750.0
     var locationManager: CLLocationManager!
-    var reviews: [String] = ["Tasty", "Awful","Tasty", "Awful","Tasty", "Awful","Tasty", "Awful","Tasty", "Awful","Tasty", "Awful","Tasty", "Awful","Tasty", "Awful"]
+    var reviews: [String] = ["Tasty", "Awful", "Tasty", "Awful", "Tasty", "Awful", "Tasty", "Awful", "Tasty", "Awful", "Tasty", "Awful", "Tasty", "Awful", "Tasty", "Awful"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // hide keyboard if we tap outside of a field
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -65,6 +71,10 @@ class SpotDetailViewController: UIViewController {
         } else {
             navigationController?.popViewController(animated: true)
         }
+    }
+    @IBAction func ratingButtonPressed(_ sender: UIButton) {
+        //TODO: eventually check if spot was saved. if it was not saevd, save it & segue if save was successful. otherwise, if it was saved successfully, segue as below:
+        performSegue(withIdentifier: "AddReview", sender: nil)
     }
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
