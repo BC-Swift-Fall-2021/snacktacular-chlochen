@@ -17,6 +17,8 @@ class SpotDetailViewController: UIViewController {
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var saveBarButton: UIBarButtonItem!
+    @IBOutlet weak var cancelBarButton: UIBarButtonItem!
     
     var spot: Spot!
     let regionDistance: CLLocationDegrees = 750.0
@@ -38,6 +40,11 @@ class SpotDetailViewController: UIViewController {
         
         if spot == nil {
             spot = Spot()
+        } else {
+            disableTextEditing()
+            cancelBarButton.hide()
+            saveBarButton.hide()
+            navigationController?.setToolbarHidden(true, animated: true)
         }
         updateMapView()
         reviews = Reviews() // eventually load data in updateUserInterface
@@ -72,6 +79,15 @@ class SpotDetailViewController: UIViewController {
         spot.address = addressTextField.text!
     }
     
+    func disableTextEditing() {
+        nameTextField.isEnabled = false
+        addressTextField.isEnabled = false
+        nameTextField.backgroundColor = .clear
+        addressTextField.backgroundColor = .clear
+        nameTextField.borderStyle = .none
+        addressTextField.borderStyle = .none
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         updateFromInterface()
         switch segue.identifier ?? "" {
@@ -93,6 +109,10 @@ class SpotDetailViewController: UIViewController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let saveAction = UIAlertAction(title: "Save", style: .default) { (_) in
             self.spot.saveData { (success) in
+                self.saveBarButton.title = "Done"
+                self.cancelBarButton.hide()
+                self.navigationController?.setToolbarHidden(true, animated: true)
+                self.disableTextEditing()
                 self.performSegue(withIdentifier: segueIdentifier, sender: nil)
             }
         }
@@ -110,6 +130,17 @@ class SpotDetailViewController: UIViewController {
             navigationController?.popViewController(animated: true)
         }
     }
+    
+    
+    @IBAction func nameFieldChanged(_ sender: UITextField) {
+        let noSpaces = nameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if noSpaces != "" {
+            saveBarButton.isEnabled = true
+        } else {
+            saveBarButton.isEnabled = false
+        }
+    }
+    
     @IBAction func ratingButtonPressed(_ sender: UIButton) {
         if spot.documentID == "" {
             saveCancelAlert(title: "This venue has not been saved", message: "You must save this venue before you can review it", segueIdentifier: "AddReview")
@@ -117,6 +148,7 @@ class SpotDetailViewController: UIViewController {
             performSegue(withIdentifier: "AddReview", sender: nil)
         }
     }
+    
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         updateFromInterface()
@@ -128,8 +160,7 @@ class SpotDetailViewController: UIViewController {
             }
         }
     }
-    
-    
+        
     @IBAction func locationButtonPressed(_ sender: UIBarButtonItem) {
         let autocompleteController = GMSAutocompleteViewController()
             autocompleteController.delegate = self
