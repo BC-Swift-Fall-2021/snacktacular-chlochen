@@ -15,6 +15,7 @@
 		6160C4FC27399ADB00FC9E46 /* SpotReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6160C4FB27399ADB00FC9E46 /* SpotReviewTableViewCell.swift */; };
 		616913D327422ADD00C99FAA /* UIView+addBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616913D227422ADD00C99FAA /* UIView+addBorder.swift */; };
 		616913D527422CC900C99FAA /* UIBarBtton+hide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616913D427422CC900C99FAA /* UIBarBtton+hide.swift */; };
+		616913D72742D5B600C99FAA /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616913D62742D5B600C99FAA /* PhotoViewController.swift */; };
 		616F90C62738E1DE00CF0D72 /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616F90C52738E1DE00CF0D72 /* ReviewTableViewController.swift */; };
 		616F90C82738E89300CF0D72 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616F90C72738E89300CF0D72 /* Review.swift */; };
 		616F90CA2738E9F600CF0D72 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616F90C92738E9F600CF0D72 /* Reviews.swift */; };
@@ -40,6 +41,7 @@
 		6160C4FB27399ADB00FC9E46 /* SpotReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotReviewTableViewCell.swift; sourceTree = "<group>"; };
 		616913D227422ADD00C99FAA /* UIView+addBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addBorder.swift"; sourceTree = "<group>"; };
 		616913D427422CC900C99FAA /* UIBarBtton+hide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarBtton+hide.swift"; sourceTree = "<group>"; };
+		616913D62742D5B600C99FAA /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		616F90C52738E1DE00CF0D72 /* ReviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
 		616F90C72738E89300CF0D72 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		616F90C92738E9F600CF0D72 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				61303F5C272F7C8C00B3D3B6 /* SpotDetailViewController.swift */,
 				6160C4FB27399ADB00FC9E46 /* SpotReviewTableViewCell.swift */,
 				616F90C52738E1DE00CF0D72 /* ReviewTableViewController.swift */,
+				616913D62742D5B600C99FAA /* PhotoViewController.swift */,
 				617771FC27307D07006E2502 /* UIViewController+alert.swift */,
 				616913D227422ADD00C99FAA /* UIView+addBorder.swift */,
 				616913D427422CC900C99FAA /* UIBarBtton+hide.swift */,
@@ -277,6 +280,7 @@
 				617771FF27307D9B006E2502 /* Spots.swift in Sources */,
 				61303F5B272F78AB00B3D3B6 /* SpotTableViewCell.swift in Sources */,
 				6160C4FC27399ADB00FC9E46 /* SpotReviewTableViewCell.swift in Sources */,
+				616913D72742D5B600C99FAA /* PhotoViewController.swift in Sources */,
 				617772012730817B006E2502 /* APIKeys.swift in Sources */,
 				617771FB27307359006E2502 /* Spot.swift in Sources */,
 				619A9CE8272F470E008E0A4F /* SceneDelegate.swift in Sources */,
